@@ -1,9 +1,14 @@
 <template>
-  <AppHeader />
+  <div>
+    <AppHeader />
+    <AppBody />
+  </div>
 </template>
 
 <script>
+import AppBody from "../components/AppBody.vue";
 export default {
-  name: 'IndexPage'
+    name: "IndexPage",
+    components: { AppBody }
 }
 </script>
