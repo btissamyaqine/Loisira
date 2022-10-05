@@ -1,19 +1,30 @@
 <template>
   
-  <header class="header">
-    <div class="navBar">
-      <h1 class="title">Loisira</h1>
-        <ul>
-          <li><nuxt-link to="#">Reservation</nuxt-link></li>
-          <li><nuxt-link to="#">Contact</nuxt-link></li>
-        </ul>
-        
-    </div>
-    <div class="search">
-      <input type="text" class="searchBar">
-      <button type="submit" class="btn" >recherche</button>
-    </div>
+  <header class="head">
+    
+        <div class="navBar">
+          <div class="title">
+            <h1>Loisira</h1>
+          </div>
+          <ul class="icon">
+            <nuxt-link to="#"><i class="fas fa-book-open">Reservation</i></nuxt-link>
+            <nuxt-link to="#"><i class="fas fa-id-card">Contact</i></nuxt-link>
+          </ul>
+        </div>
+      
+      <div class="search">
+        <input type="text" class="searchBar">
+        <button type="submit" class="search-btn" >Rechercher</button>
+      </div>
+      
   </header>
+  
+      
+  
+ 
+  
+  
+  
  
  
 
