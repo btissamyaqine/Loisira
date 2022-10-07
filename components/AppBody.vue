@@ -42,29 +42,139 @@
       <div class="card-container">
         <ul class="card-wrapper">
           <li class="card">
-            <img src='../assets/image/moon.jpg' class='card-img' alt=''>
-            <h3><a href="">A Super Wonderful Headline</a></h3>
-            <p>Lorem ipsum sit dolor amit</p>
+            <img src='../assets/image/moon.jpg' alt=''>
+            <div class="card-content">
+              <div class="content-top">
+                <div class="content-name">
+                  <h3>Nom</h3>
+                  <span>ville,pay</span> 
+                </div>
+                <div class="content-price">
+                  <h3>prix</h3>
+                </div>
+              </div>
+              <div class="content-buttom">
+                <div class="content-rating">
+                  <i>*</i>
+                  <i>*</i>
+                  <i>*</i>
+                  <i>*</i>
+                  <i>*</i>
+                </div>
+                <div class="content-time">
+                  <h3>1h</h3>
+                </div>
+              </div>
+                
+            </div>
           </li>
           <li class="card">
-            <img src='../assets/image/moon.jpg'  class='card-img' alt=''>
-            <h3><a href="">What a Fantabulous Title!</a></h3>
-            <p>Lorem ipsum sit dolor amit</p>
+            <img src='../assets/image/moon.jpg' alt=''>
+            <div class="card-content">
+              <div class="content-top">
+                <div class="content-name">
+                  <h3>Nom</h3>
+                  <span>ville,pay</span> 
+                </div>
+                <div class="content-price">
+                  <h3>prix</h3>
+                </div>
+              </div>
+              <div class="content-buttom">
+                <div class="content-rating">
+                  <i>*</i>
+                  <i>*</i>
+                  <i>*</i>
+                  <i>*</i>
+                  <i>*</i>
+                </div>
+                <div class="content-time">
+                  <h3>1h</h3>
+                </div>
+              </div>
+                
+            </div>
           </li>
           <li class="card">
-            <img src='../assets/image/moon.jpg'  class='card-img' alt=''>
-            <h3><a href="">Positively Terrific Title</a></h3>
-            <p>Lorem ipsum sit dolor amit</p>
+            <img src='../assets/image/moon.jpg' alt=''>
+            <div class="card-content">
+              <div class="content-top">
+                <div class="content-name">
+                  <h3>Nom</h3>
+                  <span>ville,pay</span> 
+                </div>
+                <div class="content-price">
+                  <h3>prix</h3>
+                </div>
+              </div>
+              <div class="content-buttom">
+                <div class="content-rating">
+                  <i>*</i>
+                  <i>*</i>
+                  <i>*</i>
+                  <i>*</i>
+                  <i>*</i>
+                </div>
+                <div class="content-time">
+                  <h3>1h</h3>
+                </div>
+              </div>
+                
+            </div>
           </li>
           <li class="card">
-            <img src='../assets/image/moon.jpg'  class='card-img' alt=''>
-            <h3><a href="">Positively Terrific Title</a></h3>
-            <p>Lorem ipsum sit dolor amit</p>
+            <img src='../assets/image/moon.jpg' alt=''>
+            <div class="card-content">
+              <div class="content-top">
+                <div class="content-name">
+                  <h3>Nom</h3>
+                  <span>ville,pay</span> 
+                </div>
+                <div class="content-price">
+                  <h3>prix</h3>
+                </div>
+              </div>
+              <div class="content-buttom">
+                <div class="content-rating">
+                  <i>*</i>
+                  <i>*</i>
+                  <i>*</i>
+                  <i>*</i>
+                  <i>*</i>
+                </div>
+                <div class="content-time">
+                  <h3>1h</h3>
+                </div>
+              </div>
+                
+            </div>
           </li>
           <li class="card">
-            <img src='../assets/image/moon.jpg'  class='card-img' alt=''>
-            <h3><a href="">Positively Terrific Title</a></h3>
-            <p>Lorem ipsum sit dolor amit</p>
+            <img src='../assets/image/moon.jpg' alt=''>
+            <div class="card-content">
+              <div class="content-top">
+                <div class="content-name">
+                  <h3>Nom</h3>
+                  <span>ville,pay</span> 
+                </div>
+                <div class="content-price">
+                  <h3>prix</h3>
+                </div>
+              </div>
+              <div class="content-buttom">
+                <div class="content-rating">
+                  <i>*</i>
+                  <i>*</i>
+                  <i>*</i>
+                  <i>*</i>
+                  <i>*</i>
+                </div>
+                <div class="content-time">
+                  <h3>1h</h3>
+                </div>
+              </div>
+                
+            </div>
           </li>
         </ul>
       </div>
