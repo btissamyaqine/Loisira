@@ -1,54 +1,56 @@
 {
-  "activite": {
-    "id":"1",
-    "type":"aquatique",
-    "nom":"bleusse",
-    "ville": "Bernet",
-    "pay": "Suiss",
-    "prix": {
-      "montant":" ",
-      "devise": "EUR"
+  "activites":[
+    {
+      "id":"1",
+      "type":"aquatique",
+      "nom":"bleusse",
+      "ville": "Bernet",
+      "pay": "Suiss",
+      "prix": {
+        "montant":" ",
+        "devise": "EUR"
+      },
+      "photo":["https://www.blausee.ch/(cms)/media/resize/size=1024x768%2Cscale=crop%2Cinterlace=1%2Cquality=75/1867959"],
+      "evaluation": "4.4"
     },
-    "photo":["https://www.blausee.ch/(cms)/media/resize/size=1024x768%2Cscale=crop%2Cinterlace=1%2Cquality=75/1867959"],
-    "evaluation": "4.4"
-  },
-  "activite2": {
-    "id":"2",
-    "type":"aerien",
-    "nom":"Parapente",
-    "ville": "Annecy",
-    "pay": "France",
-    "prix": {
-      "montant":"80",
-      "devise": "EUR"
+    {
+      "id":"2",
+      "type":"aerien",
+      "nom":"Parapente",
+      "ville": "Annecy",
+      "pay": "France",
+      "prix": {
+        "montant":"80",
+        "devise": "EUR"
+      },
+      "photo":["https://www.experts-formations.com/wp-content/uploads/2022/06/AF1QipPiaN-PChO5hSVe7sP0PSrcndR6mSzUdTFVDgRZw1600-h1000-k-no.jpeg"],
+      "evaluation": "5"
     },
-    "photo":["https://www.experts-formations.com/wp-content/uploads/2022/06/AF1QipPiaN-PChO5hSVe7sP0PSrcndR6mSzUdTFVDgRZw1600-h1000-k-no.jpeg"],
-    "evaluation": "5"
-  },
-  "activite3": {
-    "id":"3",
-    "type":"randonne",
-    "nom":"Balade a dos de chameau",
-    "ville": "Dubai",
-    "pay": "Emirats arabes unis",
-    "prix": {
-      "montant":"41",
-      "devise": "EUR"
+    {
+      "id":"3",
+      "type":"randonne",
+      "nom":"Balade a dos de chameau",
+      "ville": "Dubai",
+      "pay": "Emirats arabes unis",
+      "prix": {
+        "montant":"41",
+        "devise": "EUR"
+      },
+      "photo":["https://media.tacdn.com/media/attractions-splice-spp-674x446/06/71/ea/0e.jpg"],
+      "evaluation": "5"
     },
-    "photo":["https://media.tacdn.com/media/attractions-splice-spp-674x446/06/71/ea/0e.jpg"],
-    "evaluation": "5"
-  },
-  "activite4": {
-    "id":"4",
-    "type":"sporthiver",
-    "nom":"Ski alpin",
-    "ville": "Mont-Tremblant",
-    "pay": "Quebec",
-    "prix": {
-      "montant":"24",
-      "devise": "EUR"
-    },
-    "photo":["https://lmlequebec.ca/wp-content/uploads/2021/02/Faire-du-ski-alpin-pres-de-Quebec-LM-Le-Quebec.jpg"],
-    "evaluation": "5"
-  }
+    {
+      "id":"4",
+      "type":"sporthiver",
+      "nom":"Ski alpin",
+      "ville": "Mont-Tremblant",
+      "pay": "Quebec",
+      "prix": {
+        "montant":"24",
+        "devise": "EUR"
+      },
+      "photo":["https://lmlequebec.ca/wp-content/uploads/2021/02/Faire-du-ski-alpin-pres-de-Quebec-LM-Le-Quebec.jpg"],
+      "evaluation": "5"
+    }
+  ]
 }

@@ -1,3 +1,8 @@
+<style>
+   
+
+</style>
+
 <template>
   <div class="body">
       
@@ -304,4 +309,5 @@ export default {
   name: "AppBody"
 
 };
+
 </script>

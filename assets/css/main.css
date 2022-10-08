@@ -103,6 +103,8 @@
   }
   .cards{
     display: grid;
+    justify-content: center;
+    align-items: center;
     width: auto;
     margin: 0;
     padding: 0;
@@ -126,7 +128,6 @@
 }
 .card {  
   justify-content: space-around;
-  align-items: center;
   width: 250px;
   border-radius: 0.5rem;
   align-content: center;
@@ -136,6 +137,7 @@
 
 
  }
+ 
 
 
 
@@ -203,12 +205,14 @@
 .card:hover .content-buttom {
   opacity: 1;
   visibility: visible;
+  cursor: pointer;
 }
 @media (max-width: 40rem) {
   .card {
     width: 50%;
   }
 }
+
 
 .activites {
   display: grid;
