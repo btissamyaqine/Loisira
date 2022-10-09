@@ -46,10 +46,33 @@ export default {
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     'nuxt-fontawesome',
+    '@nuxtjs/axios',
   ],
+  axios: {
+    baseURL: 'http://localhost:4000/activite',
+  },
+
+  publicRuntimeConfig: {
+    axios: {
+      browserBaseURL: process.env.BROWSER_BASE_URL
+    }
+  },
+
+  privateRuntimeConfig: {
+    axios: {
+      baseURL: process.env.BASE_URL
+    }
+  },
+
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
+    extend (config, ctx) {
+
+      config.node = {
+           fs: 'empty'
+       }
+      }
   },
   fontawesome: {
     icons:{

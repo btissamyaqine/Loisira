@@ -128,7 +128,7 @@
 }
 .card {  
   justify-content: space-around;
-  width: 250px;
+  width: 350px;
   border-radius: 0.5rem;
   align-content: center;
   box-shadow: 0.05rem 0.1rem 0.3rem -0.03rem rgba(0, 0, 0, 0.45); 
@@ -168,14 +168,17 @@
   display: grid;
   width: 100%;
   height: 100%;
-  bottom:240px;
+  /* bottom:240px; */
   background-color: rgba(247, 245, 245, 0.5);
 }
 .content-top {
   display: flex;
   justify-content: space-between;
+  /* height: 70px; */
   
 }
+
+
 .content-name  {
   padding-left: 10px;
 }
@@ -183,12 +186,30 @@
   padding-left: 10px;
 
 }
-.content-price  {
-  padding-right: 10px;
+.content   {
+  display: flex;
+  justify-content: space-between;
+  /* padding-top: 35px; */
+  /* padding-right: 10px; */
+  /* align-content: center; */
+
 }
+.content-price {
+  display: flex;
+  padding-top: 35px;
+
+}
+
 .content-time {
   padding-right: 10px;
 
+}
+.content-price span {
+  display: grid;
+  justify-content: center;
+  color:rgb(89, 93, 97);
+  font-size: 10px;
+  padding-top: 27px;
 }
 .content-buttom {
   display: flex;
@@ -196,6 +217,7 @@
   align-items: center;
   position: relative;
   visibility: hidden;
+  height: auto;
   opacity: 0;
 }
 .card-content:hover .card-content {
@@ -257,6 +279,7 @@ i {
   color: #1cb498;
 }
 .items {
+  padding-top: 10px;
   font-size: 15px;
   color: #1cb498;
 }
@@ -458,12 +481,13 @@ border: 2px solid #08f0c5;
   
   
 }
-span {
+ span {
   display: grid;
-  justify-content: center;
-  align-items: center;
+  /* justify-content: center; */
+  /* align-items: center; */
   color:rgb(89, 93, 97);
   font-size: 10px;
+  /* padding-top: 27px; */
 }
 
 .adress-mail {
