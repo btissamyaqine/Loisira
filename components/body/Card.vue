@@ -12,7 +12,7 @@
               <div class="content-top">
                 <div class="content-name">
                   <h3>{{item.nom}}</h3>
-                  <span>{{item.ville}},{{item.pay}}</span>
+                  <p>{{item.ville}},{{item.pay}}</p>
                 </div>
                 <div class="content">
                   <div class="content-price">
@@ -21,9 +21,14 @@
                 </div>
               </div>
               <div class="content-buttom">
-                <div v-for="star in activite" class="content-rating">
-                  <i>{{star.evaluation}}</i>
-                  
+                <div class="content-rating">
+                  <div class="stars-outer">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                  </div>
                 </div>
                 <div class="content-time">
                   <h3>1h</h3>
@@ -44,7 +49,7 @@
 
   export default {
 
-computed: mapState(['activite']),
+  computed: mapState(['activite']),
 
     async asyncData({$axios}) {
       const api = 'http://localhost:4000/activite'
@@ -53,20 +58,36 @@ computed: mapState(['activite']),
       })
      
     },
-    methods: {
-      getRating() {
-        
-      }
-
-    }
-  // const getRating = () =>{
-
-  // }
-
-  }
+}
 
 </script>
 <style>
-
+.stars-outer i{
+  font-size: 15px;
+}
+/* .stars-outer {
+  position: relative;
+  display: inline-block;
+}
+.star-inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 0;
+}
+.stars-outer::before {
+  content: '\f005';
+  font-family: 'Font Awsome Free';
+  font-weight: 900;
+  color: black;
+}
+.stars-inner::before {
+  content: "\f005";
+  font-family: 'Font Awsome Free';
+  font-weight: 900;
+  color: yellow;
+} */
 </style>
 

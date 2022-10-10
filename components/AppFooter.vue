@@ -40,7 +40,7 @@
     
   
     <div class="loi">
-    <span>@2021-Loisirama | Mine of ware developpement templat-Tous droits réservés</span>
+      <span>@2021-Loisirama | Mine of ware developpement templat-Tous droits réservés</span>
     </div>
   </footer>
  
