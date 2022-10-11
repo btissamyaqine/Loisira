@@ -1,38 +1,30 @@
 <template>
   
   <header class="head">
-    
-        <div class="navBar">
-          <div class="title">
-            <h1>Loisira</h1>
-          </div>
-          <ul class="icon">
-            <nuxt-link to="#"><i class="fas fa-book-open">Reservation</i></nuxt-link>
-            <nuxt-link to="#"><i class="fas fa-id-card">Contact</i></nuxt-link>
-          </ul>
-        </div>
-      
-      <div class="search">
-        <input type="text" class="searchBar">
-        <button type="submit" class="search-btn" >Rechercher</button>
+    <div class="top-navBar">
+      <div class="top-icon">
+        <IconLoisira/>
       </div>
-      
+      <div class="nav">
+        <HeaderList/>
+      </div>
+    </div>
+    <div class="search">
+      <input type="text" class="searchBar">
+      <button type="submit" class="search-btn">Rechercher</button>
+    </div>
   </header>
-  
-      
-  
- 
-  
-  
-  
- 
- 
-
-
 </template>
+<style>
+
+</style>
 
 <script>
+import HeaderList from "../components/elements/HeaderList"
+import IconLoisira from "../components/elements/IconLoisira"
+
 export default {
     name: "AppHeader",
+    components: {HeaderList, IconLoisira}
 };
 </script>

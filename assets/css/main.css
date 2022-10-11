@@ -5,31 +5,28 @@
   display: flex;
   justify-content: space-between;
   align-content: center;
-  align-items: baseline;
+  /* align-items: baseline; */
   background-color: rgb(255, 255, 255);
   font-family: 'Fira Code', monospace;
 
 }
-.navBar {
+.top-navBar {
   display: grid;
   justify-content: start;
-  /* padding-left: 25px; */
+  padding-left: 20px;
 }
- .title {
-  font-size: 2.5rem;
+.logo{
+  width: 200px;
+}
+.top-icon {
   color: brown;
+  font-size: 20px;
+  padding: 0;
+  /* padding: 0; */
 }
-.icon{
-  
-  display: flex;
-  padding-left: 0px;
-  padding-right: 0px;
-  margin-right: 0px;
-  width: auto;
-  
-}
- a i {
-  /* float: right; */
+
+
+ /* a i {
   width: 100%;
   display: flex;
   color: rgb(236, 58, 58);
@@ -39,7 +36,7 @@
   font-size: 17px;
   padding-right: 25px;
 
-  }
+  } */
   .search {
     display: flex;
     justify-content: flex-end;
@@ -72,15 +69,21 @@
 }
 
 @media screen and (max-width: 768px) {
-  .head {
+ .head {
     display: block;
     padding: 0;
   }
-   .navBar {
+   .top-icon {
+    display: inline-block;
     width: 100%;
-    /* display: inline-block; */
+    /* padding: 30px 15px 30px 0px; */
+    
+    /* width: 100%; */
+  }
+   .top-navBar {
+    width: 100%;
     justify-content: center;
-    /* padding: 4px 2px; */
+    padding: 0;
     
   }
 
@@ -137,10 +140,9 @@
 
 
  }
- 
-
-
-
+ .stars-outer i{
+  font-size: 15px;
+}
 .card-wrapper {
   justify-content: space-around;
   align-items: center;
@@ -216,7 +218,7 @@ p{
   font-size: 10px;
   padding-top: 27px;
 }
-.content-buttom {
+.content-bottom {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -229,7 +231,7 @@ p{
   height: 200px;
   /* bottom: 10px; */
 }
-.card:hover .content-buttom {
+.card:hover .content-bottom {
   opacity: 1;
   visibility: visible;
   cursor: pointer;
@@ -278,11 +280,11 @@ p{
   padding: 15px; 
   justify-content: center;
 }
-i {
+/* i {
   position: relative;
   font-size: 30px;
   color: #1cb498;
-}
+} */
 .items {
   padding-top: 10px;
   font-size: 15px;
@@ -428,28 +430,27 @@ border: 2px solid #08f0c5;
   height: auto;
   font-family: 'Fira Code', monospace;
 }
-.navbar {
-  display: flex;
-  /* justify-content: flex-start; */
-}
-.nav {
+/* .navbar {
+  padding-left: 20px;
+} */
+/* .nav {
   padding-right: 40px;
 
-}
-.nav .title {
+} */
+/* .nav .title {
   font-size: 1.5rem;
   padding-left: 10px;
   color: brown;
-}
-.nav ul {
+} */
+/* .nav ul {
   display: grid;
   list-style-type: none;
   padding-left: 0px;
   padding-right: 0px;
   margin-right: 0px;
   
-}
-.nav a {
+} */
+/* .nav a {
    float: left;
   display: block;
   color: black;
@@ -460,7 +461,7 @@ border: 2px solid #08f0c5;
   color: brown;
 
   
-}
+} */
 
 .propos .title {
   font-size: 1.5rem;
@@ -527,7 +528,7 @@ border: 2px solid #08f0c5;
     display: block;
     padding: 0;
   }
-   .navbar {
+   /* .navbar {
     display: block;
     padding: 0;
   }
@@ -535,7 +536,7 @@ border: 2px solid #08f0c5;
     width:100%;
     margin-bottom: 15px;
     
-  }
+  } */
    .navbar .propos  {
     width:100%;
     display: inline-flex;

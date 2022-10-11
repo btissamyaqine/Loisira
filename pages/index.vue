@@ -1,10 +1,9 @@
 <template>
   <div>
     <AppHeader />
-    <!-- <AppBody /> -->
     <Activite />
-    <Card/>
-    <Client/>
+    <Card  />
+    <Client />
     <AppFooter/>
   </div>
 </template>
@@ -18,8 +17,17 @@ import Client from "../components/body/Client.vue";
 export default {
     name: "IndexPage",
     components: { AppFooter, Activite, Card, Client },
+    computed: {
+      async fetch({store}) {
+      return await Promise.all([
+        store.dispatch('client'),
+        store.dispatch('activite')
 
-    // 
+  
+      ])
+    },
+  }
+
 }
 
 </script>

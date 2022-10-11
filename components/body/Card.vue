@@ -6,7 +6,7 @@
       </div>
       <div class="card-container">
         <ul class="card-wrapper">
-          <li v-for="item in activite" :key="item.id"  class="card">
+          <li v-for="(item, index) in activite" :key="index" class="card">
             <img :src="item.photo.url" alt=''>
             <div class="card-content">
               <div class="content-top">
@@ -20,14 +20,10 @@
                   </div>
                 </div>
               </div>
-              <div class="content-buttom">
+              <div class="content-bottom">
                 <div class="content-rating">
                   <div class="stars-outer">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="far fa-star"></i>
+                    <Icon />
                   </div>
                 </div>
                 <div class="content-time">
@@ -45,49 +41,28 @@
       
 </template>
 <script>
+  import Icon from "../../components/elements/Icon.vue";
+
   import {mapState} from 'vuex';
 
   export default {
+    name: "card",
+    components: { Icon },
 
-  computed: mapState(['activite']),
+    computed: mapState(['activite']),
 
     async asyncData({$axios}) {
-      const api = 'http://localhost:4000/activite'
+      const api = 'http://localhost:4000/activite/'
       const activite = await $axios.$get(api).then((response) => {
         return {activite: response}
       })
      
     },
+  
 }
 
 </script>
 <style>
-.stars-outer i{
-  font-size: 15px;
-}
-/* .stars-outer {
-  position: relative;
-  display: inline-block;
-}
-.star-inner {
-  position: absolute;
-  top: 0;
-  left: 0;
-  white-space: nowrap;
-  overflow: hidden;
-  width: 0;
-}
-.stars-outer::before {
-  content: '\f005';
-  font-family: 'Font Awsome Free';
-  font-weight: 900;
-  color: black;
-}
-.stars-inner::before {
-  content: "\f005";
-  font-family: 'Font Awsome Free';
-  font-weight: 900;
-  color: yellow;
-} */
+
 </style>
 
