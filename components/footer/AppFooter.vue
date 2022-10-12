@@ -2,9 +2,9 @@
   
   <footer class="footer">
     <div class="footer-app">
-      <div class="navbar">
-        <div class="nav">
-          <p class="title">Navigation</p>
+      <div class="bottom-navbar">
+        <div class="bottom-nav">
+          <p class="bottom-nav-title"><b>Navigation</b></p>
           <ul>
             <li>
               <nuxt-link to="#">Reservation</nuxt-link>
@@ -15,7 +15,7 @@
           </ul>
         </div>
         <div class="propos">
-          <p class="title">A propos de nous</p>
+          <p class="bottom-propos-title"><b>À propos de nous</b> </p>
           <ul>
             <li><nuxt-link to="#">Notre equipe</nuxt-link></li>
             <li><nuxt-link to="#">Nos conditions d'utilistions</nuxt-link></li>
@@ -25,20 +25,12 @@
       </div>
       <div class="email">
         <div class="mail">
-          <p>Inscivez-vous a notre NewsLatter!</p>
-          <input type="email" class="adress-mail" placeholder="Adress Email">
+          <p><b>Inscivez-vous a notre NewsLatter!</b></p>
+          <input type="email" class="adress-email" placeholder="Adress Email">
         </div>
-        <div class="nav-bottom-icon">
-          <i class="fab fa-discord"></i>
-          <i class="fab fa-facebook-f"></i>
-          <i class="fab fa-instagram"></i>
-          <i class="fab fa-twitter"></i>
-        </div>
+        <IconBottom/>
       </div>
-
     </div>
-    
-  
     <div class="loi">
       <span>@2021-Loisirama | Mine of ware developpement templat-Tous droits réservés</span>
     </div>
@@ -50,8 +42,10 @@
 </template>
 
 <script>
+import IconBottom from './IconBottom.vue';
 export default {
-  name: "AppHeader"
+    name: "AppHeader",
+    components: { IconBottom }
 };
 </script>
 

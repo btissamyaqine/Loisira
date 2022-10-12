@@ -28,7 +28,7 @@
         </div>
       </div>
       <div class="button">
-            <button class="button-cl">voir plus</button>
+            <button class="button-cl">voir tout les avis</button>
       </div>
     </div>
   </div>
@@ -44,15 +44,15 @@
     components: { Icon, IconSolide },
 
     computed: mapState(['client']),
+    data: () => ({
+    client: []
+  }),
+    
+    
+    async fetch() {
+    this.client = await this.$axios.$get('http://localhost:4000/client/')
+  },
 
-     asyncData({$axios}) {
-      return $axios.$get('http://localhost:4000/client/')
-      .then( response => {
-        return {
-          client: response
-        }
-      })
-     
-    }
 }
+
 </script>

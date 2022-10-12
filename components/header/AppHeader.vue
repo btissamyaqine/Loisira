@@ -9,9 +9,9 @@
         <HeaderList/>
       </div>
     </div>
-    <div class="search">
-      <input type="text" class="searchBar">
-      <button type="submit" class="search-btn">Rechercher</button>
+    <div class="top-search">
+      <input type="text" class="top-searchBar">
+      <button type="submit" class="top-search-btn">Rechercher</button>
     </div>
   </header>
 </template>
@@ -20,8 +20,8 @@
 </style>
 
 <script>
-import HeaderList from "../components/elements/HeaderList"
-import IconLoisira from "../components/elements/IconLoisira"
+import HeaderList from "./HeaderList"
+import IconLoisira from "./IconLoisira"
 
 export default {
     name: "AppHeader",

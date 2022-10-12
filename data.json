@@ -20,7 +20,7 @@
       }
     ],
     
-    "activite":[
+    "card":[
       {
         "id":"1",
         "type":"aquatique",
@@ -147,7 +147,7 @@
   }
 ],
 
-"activite":[
+"card":[
   {
     "id":"1",
     "type":"aquatique",

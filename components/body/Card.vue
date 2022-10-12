@@ -6,7 +6,7 @@
       </div>
       <div class="card-container">
         <ul class="card-wrapper">
-          <li v-for="(item, index) in activite" :key="index" class="card">
+          <li v-for="(item, index) in card" :key="index" class="card">
             <img :src="item.photo.url" alt=''>
             <div class="card-content">
               <div class="content-top">
@@ -43,22 +43,22 @@
 <script>
   import Icon from "../../components/elements/Icon.vue";
 
-  import {mapState} from 'vuex';
+  import { mapState } from 'vuex';
 
   export default {
     name: "card",
     components: { Icon },
 
-    computed: mapState(['activite']),
+    computed: mapState(['card']),
+    data: () => ({
+    card: []
+  }),
+    
+    
+    async fetch() {
+    this.card = await this.$axios.$get('http://localhost:4000/card/')
+  },
 
-    async asyncData({$axios}) {
-      const api = 'http://localhost:4000/activite/'
-      const activite = await $axios.$get(api).then((response) => {
-        return {activite: response}
-      })
-     
-    },
-  
 }
 
 </script>
