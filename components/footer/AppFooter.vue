@@ -28,7 +28,9 @@
           <p><b>Inscivez-vous a notre NewsLatter!</b></p>
           <input type="email" class="adress-email" placeholder="Adress Email">
         </div>
-        <IconBottom/>
+        <!-- <div class="bottom-icon"> -->
+          <IconBottom/>
+        <!-- </div> -->
       </div>
     </div>
     <div class="loi">

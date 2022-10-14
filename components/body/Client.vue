@@ -45,8 +45,8 @@
 
     computed: mapState(['client']),
     data: () => ({
-    client: []
-  }),
+      client: []
+    }),
     
     
     async fetch() {

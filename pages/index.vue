@@ -1,8 +1,8 @@
 <template>
   <div>
     <AppHeader />
+    <Card />
     <Activite />
-    <Card  />
     <Client />
     <AppFooter/>
   </div>

@@ -3,8 +3,9 @@
     <div  class="cards">
       <div class="title-card">
         <h1>Nos coups de coeur</h1>
+        <input class="top-searchBar" @keyup="search($event.target.value)">
       </div>
-      <div class="card-container">
+      <div class="card-container" @set-filters="filtersChanged($event)">
         <ul class="card-wrapper">
           <li v-for="(item, index) in card" :key="index" class="card">
             <img :src="item.photo.url" alt=''>
@@ -51,13 +52,45 @@
 
     computed: mapState(['card']),
     data: () => ({
-    card: []
+      allCards: [],
+      filteredCards: [],
+      card: [],
+      filters: {
+        s: ''
+      }
   }),
-    
-    
-    async fetch() {
-    this.card = await this.$axios.$get('http://localhost:4000/card/')
+  //   async fetch() {
+  //   this.card = await this.$axios.$get('http://localhost:4000/card/')
+  // },
+  async mounted() {
+    const response = await fetch('http://localhost:4000/card/');
+    const content = await response.json();
+    this.allCards = content;
+    this.filteredCards = content.slice(0, this.filters.page * this.perPage);
   },
+  methods: {
+    search(s) {
+      this.$emit('set-filters', {
+        ...this.filters,
+        s,
+        page: 1
+      });
+    },
+    filtersChanged(f) {
+      this.filters.s = f.s
+      let cards = this.allCards.filter(p => p.ville.toLowerCase().indexOf(this.filters.s.toLowerCase()) >= 0 ||
+        p.pay.toLowerCase().indexOf(this.filters.s.toLowerCase()) >= 0);
+
+    },
+  }
+  // async fetch ({ store }) {
+  //   await store.dispatch('activites/fetchAllActivites')
+  // },
+  // mounted () {
+  //   if (!this.activites) {
+  //     this.$store.dispatch('activites/fetchAllActivites')
+  //   }
+  // }
 
 }
 

@@ -9,10 +9,7 @@
         <HeaderList/>
       </div>
     </div>
-    <div class="top-search">
-      <input type="text" class="top-searchBar">
-      <button type="submit" class="top-search-btn">Rechercher</button>
-    </div>
+    <SearchBox />
   </header>
 </template>
 <style>
@@ -22,9 +19,19 @@
 <script>
 import HeaderList from "./HeaderList"
 import IconLoisira from "./IconLoisira"
-
+import SearchBox from "./searchBox.vue";
 export default {
     name: "AppHeader",
-    components: {HeaderList, IconLoisira}
+    components: { HeaderList, IconLoisira, SearchBox },
+
+  //   methods: {
+  //   async fetchCard(searchInput) {
+  //     const { data } = await this.$axios.$get('http://localhost:4000/card', {
+  //       search_term: searchInput,
+  //     })
+
+  //     return data.card
+  //   },
+  // },
 };
 </script>
