@@ -44,9 +44,9 @@
 </template>
 
 <script>
-import IconBottom from './IconBottom.vue';
+import IconBottom from '../elements/IconBottom.vue';
 export default {
-    name: "AppHeader",
+    name: "Footer",
     components: { IconBottom }
 };
 </script>

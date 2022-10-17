@@ -6,7 +6,7 @@
       </div>
       
       <div class="client-container">
-        <div v-for="(item, index) in client" :key="index" v-bind="client" class="client">
+        <div v-for="item in client" :key="item.id" class="client">
           <div class="client-wrapper">
             <div class="client-profil">
               <div class="client-avatar">
@@ -37,18 +37,12 @@
   import IconSolide from "../../components/elements/IconSolide.vue";
   import Icon from "../../components/elements/Icon.vue";
 
-  import {mapState} from 'vuex';
-
   export default {
     name: "client",
     components: { Icon, IconSolide },
-
-    computed: mapState(['client']),
     data: () => ({
       client: []
     }),
-    
-    
     async fetch() {
     this.client = await this.$axios.$get('http://localhost:4000/client/')
   },
