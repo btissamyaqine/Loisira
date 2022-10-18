@@ -15,39 +15,47 @@
         <button type="submit" class="top-search-btn">Rechercher</button>
       </div>
     </div>
-    <div class="activites">
+hey am from filter
+
+    <Filters :filterCards="filterCards"  />
+    <div>
+      <p v-for="filter in filters" :key="filter" @click="() => filterCards(filter)">
+        {{filter}}
+      </p>
+    </div>
+    <!-- <div class="activites">
           <div class="title-activite">
             <h1>Recherche par activite</h1>
           </div>
           <div class="activite-wrapper">
-            <div class="activite">
-              <i class="fas fa-skiing">
-                <div class="items">Sport hiver</div>
+            <div class="activite" @click="toggel($event)">
+              <i class="fas fa-skiing" >
+                <div class="items" >Sport hiver</div>
               </i>
             </div>
-            <div class="activite">
+            <div class="activite" @click="toggel($event)">
               <i class="fas fa-swimmer">
                 <div class="items">Aquatique</div>
               </i>
             </div>
-            <div class="activite">
+            <div class="activite" @click="toggel($event)">
               <i class="fas fa-skiing-nordic">
-                <div class="items">Randonnées</div>
+                <div class="items">Randonnée</div>
               </i>
             </div>
-            <div class="activite">
+            <div class="activite" @click="toggel($event)">
               <i class="fas fa-parachute-box">
                 <div class="items">Aérien</div>
               </i>
             </div>
-            <div class="activite">
+            <div class="activite" @click="toggel($event)">
               <i class="fas fa-basketball-ball">
                 <div class="items">Sport d'équipe</div>
               </i>
             </div>
           </div>
-        </div>
-    <div  class="cards">
+      </div> -->
+      <div class="cards">
       <div class="title-card">
         <h1>Nos coups de coeur</h1>
       </div>
@@ -59,7 +67,7 @@
               <div class="content-top">
                 <div class="content-name">
                   <h3>{{card.nom}}</h3>
-                  <p>{{card.ville}},{{card.pay}}</p>
+                  <p>{{card.ville}},{{card.pay}}, {{card.categorie}}</p>
                 </div>
                 <div class="content">
                   <div class="content-price">
@@ -72,6 +80,7 @@
                   <div class="stars-outer">
                     <Icon />
                   </div>
+
                 </div>
                 <div class="content-time">
                   <h3>1h</h3>
@@ -84,6 +93,7 @@
       </div>
       
     </div>
+    
     <Client />
     <Footer />
   </div>
@@ -95,19 +105,18 @@
   import IconLoisira from "../elements/IconLoisira.vue"
   import Client from './Client.vue'
   import Footer from './Footer.vue'
-import HeaderList from "../elements/HeaderList.vue";
+  import HeaderList from "../elements/HeaderList.vue"
+  import Filters from './filters.vue'
+  // const filters = []
+
    
-  // import Icon from "../../components/elements/Icon.vue";
   export default {
     name: "AppBody",
-    components: { Icon, IconSolide, Client, Footer, IconLoisira, HeaderList },
-    // props:["card"],
-    // computed: mapState(['cards']),
+    components: { Icon, IconSolide, Client, Footer, IconLoisira, HeaderList, Filters },
     data: () => ({
       cards:[],
-      // client:[],
       search:'',
-      
+      filters:['All', 'Sport', 'Aquatique']
     }),
     computed: {
         searchCards() {
@@ -116,10 +125,21 @@ import HeaderList from "../elements/HeaderList.vue";
         },
     async fetch() {
     this.cards = await this.$axios.$get('http://localhost:4000/cards/')
-    },    
-    
+    }, 
+    methods: {
+      filterCards(catName) {
+      this.resetCards()
+      if (catName !== 'All') {
+        this.cards = this.cards?.filter((card) => {
+          return card.categorie === catName
+        })
+      }
+    },
+    resetCards() {
+      this.cards = this.$axios.$get('http://localhost:4000/cards/') 
+    }
   }
-  
+  }  
 </script>
 <style>
 

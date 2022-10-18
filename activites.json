@@ -1,0 +1,34 @@
+{
+  "activites":[
+    {
+      "id":1,
+      "title":"Sport hiver",
+      "icon" :"fas fa-skiing",
+      "status":"sportHiver"
+    }, 
+    {
+      "id": 2,
+      "title":"Aquatique",
+      "icon" :"fas fa-swimmer",
+      "status":"aquatique"
+    },    
+    {
+      "id": 3,
+      "title": "Randonnées",
+      "icon" : "fas fa-skiing-nordic",
+      "status": "randonne"
+    },
+    {
+      "id": 4,
+      "title": "Aérien",
+      "icon" : "fas fa-parachute-box",
+      "status": "aerien"
+    },
+    {
+      "id": 5,
+      "title": "Sport d'équipe",
+      "icon" : "fas fa-basketball-ball",
+      "status": "sportequipe"
+    }
+  ]
+}
