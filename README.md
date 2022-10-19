@@ -1,9 +1,4 @@
 # tourismPage
-
-## Build Setup
-
-
-
 ## Description:
  **Loisira** une agence de loisirs et touristique proposant des activités dans le monde entier, à des prix imbattables.
 
@@ -43,4 +38,3 @@ all we use axios
     '@nuxtjs/axios',
     ],
   -create index file in store folder then put the code into it include the state, mutations, and actions.
-  
