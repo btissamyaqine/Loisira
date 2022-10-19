@@ -1,11 +1,12 @@
 @import "https://pro.fontawesome.com/releases/v5.10.0/css/all.css";
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code&display=swap');
-
+html {
+  justify-content: center;
+}
 .head {
   display: flex;
   justify-content: space-between;
   align-content: center;
-  /* align-items: baseline; */
   background-color: rgb(255, 255, 255);
   font-family: 'Fira Code', monospace;
 
@@ -16,27 +17,17 @@
   padding-left: 20px;
 }
 .logo{
-  width: 200px;
+  width: 300px;
+}
+.logo img {
+  width: 300px;
+  justify-content: center;
 }
 .top-icon {
   color: rgb(245, 104, 59);
   font-size: 20px;
   padding: 0;
-  /* padding: 0; */
 }
-
-
- /* a i {
-  width: 100%;
-  display: flex;
-  color: rgb(236, 58, 58);
-  text-align: center;
-  padding: 6px;
-  text-decoration: none;
-  font-size: 17px;
-  padding-right: 25px;
-
-  } */
   .top-search {
     display: flex;
     justify-content: flex-end;
@@ -76,9 +67,6 @@
    .top-icon {
     display: inline-block;
     width: 100%;
-    /* padding: 30px 15px 30px 0px; */
-    
-    /* width: 100%; */
   }
    .top-navBar {
     width: 100%;
@@ -173,6 +161,10 @@
 .content-name  {
   padding-left: 10px;
 }
+.content-name a {
+  text-decoration: none;
+  color: #000000;
+}
 p{
   font-size: 12px;
   color:rgb(89, 93, 97);
@@ -225,9 +217,10 @@ p{
   .card {
     width: 50%;
   }
+  .title-card {
+    font-size: 0.8rem;
+  }
 }
-
-
 .activites {
   display: grid;
   align-items: center;
@@ -277,6 +270,13 @@ p{
 }
 .title-activite {
   padding-left: 25px;
+  
+}
+@media (max-width: 40rem) {
+  .title-activite {
+    font-size: 0.8rem;
+  }
+  
 }
 .activite:hover {
 font-size: 40px;
@@ -340,7 +340,6 @@ border: 2px solid #08f0c5;
   color: #1cb498;
   font-size: 15px;
 }
-
 .client-wrapper {
   display: flex;
   justify-content: space-between;
@@ -353,7 +352,6 @@ border: 2px solid #08f0c5;
   color: #4b4b4b;
 }
 .button-cl {
-
   background-color: #1cb498;
   border-radius: 10px;
   border: none;
@@ -371,7 +369,6 @@ border: 2px solid #08f0c5;
   align-items: center;
   padding-bottom: 100px;
   margin-right: 220px;
-  
 }
 
 @media screen and (max-width: 768px) {
@@ -384,23 +381,21 @@ border: 2px solid #08f0c5;
   }
   .client-title {
     padding-left: 10px;
+    font-size: 0.8rem;
   }
-
 }
 @media (max-width: 40rem) {
   .client {
     width: 100%;
+
   }
 }
-
 @media (max-width: 40rem) {
   .button {
     width: 75%;
     position: relative;
   }
-
 }
-
 .footer {
   align-content: center;
   padding-bottom: 5rem;
@@ -421,11 +416,9 @@ border: 2px solid #08f0c5;
 }
 .bottom-nav {
   padding-right: 40px;
-
 }
 .bottom-nav .bottom-nav-title {
   font-size: 1.5rem;
-  /* padding-left: 10px; */
   color: brown;
 }
 .bottom-nav ul {
@@ -444,13 +437,22 @@ border: 2px solid #08f0c5;
   text-decoration: none;
   font-size: 17px;
   color: rgb(245, 104, 59);
-
-  
 }
-
 .propos .bottom-propos-title {
   font-size: 1.5rem;
   color: brown;
+}
+.proposList:hover {
+  color: brown;
+  cursor: pointer;
+  font-size: 1rem;
+
+}
+.navList:hover{
+  color: brown;
+  font-size: 1rem;
+
+  cursor: pointer;
 }
 .propos ul {
   display: grid;
@@ -491,10 +493,7 @@ border: 2px solid #08f0c5;
   padding-left: 10px;
   background-color: rgba(220,220,220,0.5) ;
 }
-/* .bottom-icon {
-  padding-bottom: 120px;
 
-} */
 .nav-bottom-icon {
   display: flex;
   justify-content: flex-end;
@@ -545,6 +544,9 @@ border: 2px solid #08f0c5;
     padding-left: 10px;
   }
   .adress-email {
+    width: 100%;
+  }
+  .email-title{
     width: 100%;
   }
   .bottom-icon {

@@ -5,27 +5,16 @@
       <div class="bottom-navbar">
         <div class="bottom-nav">
           <p class="bottom-nav-title"><b>Navigation</b></p>
-          <ul>
-            <li>
-              <nuxt-link to="#">Reservation</nuxt-link>
-            </li>
-            <li>
-              <nuxt-link to="#">Contact</nuxt-link>
-            </li>
-          </ul>
+          <NavList/>
         </div>
         <div class="propos">
           <p class="bottom-propos-title"><b>À propos de nous</b> </p>
-          <ul>
-            <li><nuxt-link to="#">Notre equipe</nuxt-link></li>
-            <li><nuxt-link to="#">Nos conditions d'utilistions</nuxt-link></li>
-            <li><nuxt-link to="#">Nos conditions de vente</nuxt-link></li>
-          </ul>
+          <FooterList/>
         </div>
       </div>
       <div class="email">
         <div class="mail">
-          <p><b>Inscivez-vous a notre NewsLatter!</b></p>
+          <p class="email-title"><b>Inscivez-vous a notre NewsLatter!</b></p>
           <input type="email" class="adress-email" placeholder="Adress Email">
         </div>
           <IconBottom/>
@@ -43,9 +32,11 @@
 
 <script>
 import IconBottom from '../elements/IconBottom.vue';
+import FooterList from '../elements/ProposList.vue';
+import NavList from '../elements/NavList.vue';
 export default {
     name: "Footer",
-    components: { IconBottom }
+    components: { IconBottom, FooterList, NavList }
 };
 </script>
 

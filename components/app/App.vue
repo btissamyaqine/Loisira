@@ -1,6 +1,6 @@
 <template>
   
-  <div class="app">
+  <div class="page">
     <div  class="head">
       <div class="top-navBar">
         <div class="top-icon">
@@ -59,8 +59,11 @@
             <div class="card-content">
               <div class="content-top">
                 <div class="content-name">
-                  <h3>{{card.nom}}</h3>
-                  <p>{{card.ville}},{{card.pay}}, {{card.categorie}}</p>
+                  <NuxtLink to="#">
+                    <h3>{{card.nom}}</h3>
+                  </NuxtLink>
+                  
+                  <p>{{card.ville}},{{card.pay}}</p>
                 </div>
                 <div class="content">
                   <div class="content-price">
@@ -99,12 +102,11 @@
   import Client from './Client.vue'
   import Footer from './Footer.vue'
   import HeaderList from "../elements/HeaderList.vue"
-  import Filters from './filters.vue'
 
    
   export default {
     name: "AppBody",
-    components: { Icon, IconSolide, Client, Footer, IconLoisira, HeaderList, Filters },
+    components: { Icon, IconSolide, Client, Footer, IconLoisira, HeaderList },
     data: () => ({
       cards:[],
       search:'',
@@ -140,7 +142,6 @@
           this.cardsFilterKey.splice(this.cardsFilterKey.indexOf(text), 1)
         } else {
           this.cardsFilterKey.push(text)
-          // console.log(this.cardsFilterKey)
         }
       }
     }

@@ -10,14 +10,10 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
+      { name: 'Loisira', content: 'une agence de loisirs et touristique proposant des activités dans le monde entier, à des prix imbattables' },
+      { name: 'Activité', content: 'activités  vous laissez rechercher des activites dans la ville ou le pays de votre choix' },
+      { hid: 'description', name: 'description', content: 'une agence de loisirs et touristique proposant des activités dans le monde entier, à des prix imbattables' },
       { name: 'format-detection', content: 'telephone=no' }
-    ],
-    link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
-    ],
-    script: [
-      {src: 'https://kit.fontawesome.com/[user].js', async: true, crossorigin: 'anonymous'},
     ],
 
   },
@@ -45,13 +41,8 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
-    'nuxt-fontawesome',
     '@nuxtjs/axios',
   ],
-  axios: {
-    baseURL: 'http://localhost:4000/activite',
-  },
-
   publicRuntimeConfig: {
     axios: {
       browserBaseURL: process.env.BROWSER_BASE_URL
@@ -63,21 +54,8 @@ export default {
       baseURL: process.env.BASE_URL
     }
   },
-
-
-  // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
-    extend (config, ctx) {
-
-      config.node = {
-           fs: 'empty'
-       }
-      }
+    
   },
-  fontawesome: {
-    icons:{
-     solid:true,
-     brands:true
-    }
-   }
+  
 }
